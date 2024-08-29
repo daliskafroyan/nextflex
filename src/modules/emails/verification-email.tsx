@@ -26,7 +26,7 @@ export const VerificationEmail = ({
 }: VerificationEmailProps) => (
     <Html>
         <Head />
-        <Preview>You're already verified!</Preview>
+        <Preview>You&apos;re already verified!</Preview>
         <Body style={main}>
             <Container style={container}>
                 <Heading style={heading}>click the button below to login</Heading>
@@ -65,13 +65,6 @@ const heading = {
     fontWeight: "400",
     color: "#484848",
     padding: "17px 0 0",
-};
-
-const paragraph = {
-    margin: "0 0 15px",
-    fontSize: "15px",
-    lineHeight: "1.4",
-    color: "#3c4149",
 };
 
 const buttonContainer = {
