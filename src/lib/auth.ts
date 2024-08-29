@@ -1,7 +1,7 @@
 import { env } from '@/config/env';
 import { db } from '@/database/db';
 import { roleEnum, sessionsTable, usersTable } from '@/database/schema';
-import { DrizzlePostgreSQLAdapter, DrizzleSQLiteAdapter } from '@lucia-auth/adapter-drizzle';
+import { DrizzlePostgreSQLAdapter } from '@lucia-auth/adapter-drizzle';
 import { Google } from 'arctic';
 import { Lucia, Session, User } from 'lucia';
 import { cookies } from 'next/headers';

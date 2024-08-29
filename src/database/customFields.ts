@@ -6,7 +6,8 @@ export const idField = () =>
     .primaryKey()
     .$defaultFn(() => randomUUID());
 
-export const dateField = (fieldName: string) => timestamp(fieldName, { mode: 'date' });
+export const dateField = (fieldName: string) =>
+  timestamp(fieldName, { mode: 'date', withTimezone: true });
 
 export const dateRequiredField = (fieldName: string) =>
   dateField(fieldName).notNull();
@@ -15,7 +16,7 @@ export const dateWithDefaultField = (fieldName: string) =>
   dateField(fieldName).defaultNow();
 
 export const updateAtField = () =>
-  timestamp('updated_at', { mode: 'date' }).defaultNow();
+  timestamp('updated_at', { mode: 'date', withTimezone: true }).defaultNow();
 
 export const booleanField = (fieldName: string) =>
   boolean(fieldName).default(false);
